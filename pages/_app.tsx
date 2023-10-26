@@ -3,6 +3,7 @@ import "../styles/global.css";
 import { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
 import dynamic from "next/dynamic";
+import { Analytics } from "@vercel/analytics/react";
 
 const DynamicLayout = dynamic(() => import("@/components/Layout"), { ssr: false });
 const DynamicTransition = dynamic(() => import("@/components/Transition"), { ssr: false });
@@ -17,6 +18,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </motion.div>
       </AnimatePresence>
+      <Analytics />
     </DynamicLayout>
   );
 }
