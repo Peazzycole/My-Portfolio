@@ -3,6 +3,7 @@ import Nav from "./Nav";
 import Header from "./Header";
 import TopLeftImg from "./TopLeftImg";
 import { ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 type layoutProps = {
   children: ReactNode;
@@ -23,6 +24,7 @@ const Layout: React.FC<layoutProps> = ({ children }) => {
       <Nav />
       <Header />
       {children}
+      <Analytics />
     </div>
   );
 };
