@@ -12,13 +12,13 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   return (
     <DynamicLayout>
-      <AnimatePresence mode="wait">
-        <motion.div key={router.route} className="h-full">
+      <AnimatePresence mode="wait" initial={false}>
+        <div key={router.route} className="h-full">
           <DynamicTransition />
           <Component {...pageProps} />
-        </motion.div>
+          <Analytics />
+        </div>
       </AnimatePresence>
-      <Analytics />
     </DynamicLayout>
   );
 }

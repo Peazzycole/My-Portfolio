@@ -1,5 +1,3 @@
-'use client'
-
 import { motion } from "framer-motion";
 import { fadeIn } from "@/helper/variants";
 import dynamic from "next/dynamic";
@@ -26,7 +24,7 @@ const Work = () => {
               My Work <span className="text-accent">.</span>
             </motion.h2>
             <motion.p
-              variants={fadeIn("up", 0.4)}
+              variants={fadeIn("up", 0.2)}
               initial="hidden"
               animate="show"
               exit="hidden"
@@ -39,7 +37,7 @@ const Work = () => {
             </motion.p>
           </div>
           <motion.div
-            variants={fadeIn("down", 0.6)}
+            variants={fadeIn("down", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"

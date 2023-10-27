@@ -1,5 +1,3 @@
-'use client'
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/helper/variants";
@@ -7,7 +5,6 @@ import CountUp from "react-countup";
 import dynamic from "next/dynamic";
 import { aboutData } from "@/helper/data";
 
-const DynamicAvatar = dynamic(() => import("@/components/Avatar"));
 const DynamicCircles = dynamic(() => import("@/components/Circles"));
 
 const About = () => {
@@ -15,15 +12,6 @@ const About = () => {
   return (
     <div className="h-full py-32 bg-primary/30 text-center xl:text-left">
       <DynamicCircles />
-      <motion.div
-        variants={fadeIn("down", 0.2)}
-        initial="hidden"
-        animate="show"
-        exit="hidden"
-        className="hidden xl:flex absolute bottom-0 -left-[370px]"
-      >
-        <DynamicAvatar />
-      </motion.div>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         <div className="flex-1 flex flex-col justify-center">
           {/* heading */}
@@ -51,7 +39,7 @@ const About = () => {
           </motion.p>
           {/* countUp */}
           <motion.div
-            variants={fadeIn("right", 0.6)}
+            variants={fadeIn("right", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
@@ -87,7 +75,7 @@ const About = () => {
         </div>
         {/* Info section */}
         <motion.div
-          variants={fadeIn("left", 0.4)}
+          variants={fadeIn("left", 0.2)}
           initial="hidden"
           animate="show"
           exit="hidden"
