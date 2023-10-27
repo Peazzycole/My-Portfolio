@@ -10,7 +10,7 @@ const DynamicTransition = dynamic(() => import("@/components/Transition"), { ssr
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <DynamicLayout>
-      <AnimatePresence mode="wait" initial={false}>
+      <AnimatePresence mode="wait">
         <DynamicTransition />
         <Component {...pageProps} />
         <Analytics />

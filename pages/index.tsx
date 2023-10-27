@@ -1,5 +1,3 @@
-'use client'
-
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { fadeIn } from "../helper/variants";
