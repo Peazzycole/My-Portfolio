@@ -42,7 +42,7 @@ const About = () => {
             exit="hidden"
             className=" text-sm md:text-lg max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            I am a committed Fullstack developer located in Sapele, Nigeria, with a strong skill set that encompasses various web technologies.nMy experience has exposed me to working with individuals from diverse cultural backgrounds, and I thrive in a collaborative, cross-functional team environment. My primary focus is on producing exceptional web and mobile applications, and I am dedicated to continually improving my skills to provide top-notch solutions.
+            My name is Peace Oghenevwefe, I am a committed Fullstack developer, with a strong skill set that encompasses various web technologies. My experience has exposed me to working with individuals from diverse cultural backgrounds, and I thrive in a collaborative, cross-functional team environment. My primary focus is on producing exceptional web and mobile applications, and I am dedicated to continually improving my skills to provide top-notch solutions.
           </motion.p>
           {/* countUp */}
           <motion.div
