@@ -100,10 +100,10 @@ const About = () => {
                 key={i}
                 className="flex-1 flex flex-col xl:flex-row max-w-max gap-x-2 items-center text-white/60 text-sm"
               >
-                <div className="font-light mb-2 xl:mb-0">{item.title}</div>
+                <div className="font-light mb-2 xl:mb-0 xl:w-max">{item.title}</div>
                 <div className="hidden xl:flex">-</div>
                 <div className="font-bold">{item.stage}</div>
-                <div className="flex gap-x-4 flex-wrap justify-center gap-y-2">
+                <div className="flex gap-x-4 flex-wrap md:flex-nowrap justify-center gap-y-2">
                   {item.icons?.map((icon, i) => (
                     <div key={i} className="sm:text-sm md:text-2xl text-white">
                       {icon}
