@@ -20,22 +20,22 @@ const Home = () => {
             exit="hidden"
             className="h1"
           >
-            <div className="flex items-center justify-center gap-x-2 xl:justify-start xl:mb-[-30px] md:mb-[-20px]">
+            <div className="flex items-center justify-center gap-x-2 xl:justify-start xl:mb-[-30px] md:mb-[-20px] vsm:text-2xl vsm:mt-10  vsm:-mb-3">
               Hi! Welcome
               <HiFaceSmile className="animate-bounce text-secondary" /> <br />
             </div>
-            <span className="text-[#e68e2e] opacity-80 text-xl md:text-2xl">I&apos;M A FULLSTACK DEVELOPER</span>
+            <span className="text-[#e68e2e] opacity-80 text-xl md:text-2xl vsm:text-sm">I&apos;M A FULLSTACK DEVELOPER</span>
           </motion.h1>
           <motion.p
             variants={fadeIn("down", 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm text-white xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="max-w-sm text-white xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 vsm:-mt-3"
           >
             I&apos;m a developer who focuses on getting things done efficiently. I love writing neat and tidy code. I&apos;m also quick at learning and using new software and technologies.
-            <Link href={'https://drive.google.com/file/d/1dltQvrF31_ifB5759-b0eMzEvpWK1obq/view?usp=sharing'} target='_blank' className="w-full flex items-center justify-center xl:justify-start font-bold">
-              <button className="flex text-white justify-center opacity-90 btn bg-gradient-to-r from-[#F13024] w-max to-[#e68e2e] rounded-full items-center px-8 mt-6 mb-12 hover:scale-110 hover:opacity-70 transition-all duration-300 z-10 ease-in-out">Resume</button>
+            <Link href={'https://drive.google.com/file/d/1dltQvrF31_ifB5759-b0eMzEvpWK1obq/view?usp=sharing'} target='_blank' className="w-full flex items-center justify-center xl:justify-start font-bold vsm:-mb-3">
+              <button className="flex text-white justify-center opacity-90 btn bg-gradient-to-r from-[#F13024] w-max to-[#e68e2e] rounded-full items-center px-8 mt-6 mb-12 vsm:mb-0 hover:scale-110 hover:opacity-70 transition-all duration-300 z-10 ease-in-out">Resume</button>
             </Link>
           </motion.p>
 
