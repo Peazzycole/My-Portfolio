@@ -9,6 +9,11 @@ const DynamicCircles = dynamic(() => import("@/components/Circles"), { ssr: fals
 const DynamicBulb = dynamic(() => import("@/components/Bulb"), { ssr: false });
 
 const Contact = () => {
+
+  function onSubmitHandler(e: any) {
+    e.preventDefault();
+  }
+
   return (
     <div className="h-full bg-primary/30">
       <DynamicCircles />
@@ -24,6 +29,7 @@ const Contact = () => {
             Let&apos;s <span className="text-accent">connect.</span>
           </motion.h2>
           <motion.form
+            onSubmit={onSubmitHandler}
             variants={fadeIn("up", 0.4)}
             initial="hidden"
             animate="show"

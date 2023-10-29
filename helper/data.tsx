@@ -3,15 +3,19 @@ import {
   FaCss3,
   FaJs,
   FaReact,
-  FaWordpress,
   FaFigma,
+  FaPhp,
+  FaMagento,
+  FaNodeJs,
 } from "react-icons/fa";
 
 import {
   SiNextdotjs,
-  SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
+  SiMicrosoftword,
+  SiTailwindcss,
+  SiNativescript,
+  SiGraphql,
+  SiMysql
 } from "react-icons/si";
 
 export const aboutData = [
@@ -26,33 +30,26 @@ export const aboutData = [
           <FaCss3 key={2} />,
           <FaJs key={3} />,
           <FaReact key={4} />,
-          <SiNextdotjs key={5} />,
-          <SiFramer key={6} />,
-          <FaWordpress key={7} />,
+          <FaPhp key={5} />,
+          <SiNextdotjs key={6} />,
+          <FaMagento key={7} />,
+          <SiTailwindcss key={8} />,
+          <FaNodeJs key={9} />,
+          <SiGraphql key={10} />,
+          <SiMysql key={11} />
         ],
       },
       {
-        title: "UI/UX Design",
+        title: "UI / UX",
         icons: [
           <FaFigma key={1} />,
-          <SiAdobexd key={2} />,
-          <SiAdobephotoshop key={3} />,
         ],
       },
-    ],
-  },
-  {
-    title: "awards",
-    info: [
       {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
-        icons: [],
-      },
-      {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
-        icons: [],
+        title: "Word Processing",
+        icons: [
+          <SiMicrosoftword key={2} />,
+        ],
       },
     ],
   },
@@ -60,38 +57,33 @@ export const aboutData = [
     title: "experience",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
+        title: "Junior Web Developer - Scandiweb",
+        stage: "2022 - 2023",
         icons: [],
       },
       {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
+        title: "React Intern - LinuxJobber",
+        stage: "2022",
         icons: [],
       },
       {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
+        title: "Typist - Vision International Academu",
+        stage: "2014 - present",
         icons: [],
       },
     ],
   },
   {
-    title: "credentials",
+    title: "Education",
     info: [
       {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
+        title: "Bachelor Of Engineering - University Of Benin",
+        stage: "2018 - 2022",
         icons: [],
       },
       {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
-        icons: [],
-      },
-      {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
+        title: "SSCE - Institutue Of Continuous Education",
+        stage: "2016",
         icons: [],
       },
     ],

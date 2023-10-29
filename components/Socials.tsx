@@ -1,26 +1,30 @@
 import Link from "next/link";
 
 import {
-  RiYoutubeLine,
   RiInstagramLine,
-  RiGithubLine,
-  RiDribbbleLine,
+  RiGithubFill,
+  RiLinkedinFill,
+  RiTwitterFill,
+  RiWhatsappFill
 } from "react-icons/ri";
 
 const Socials = () => {
   return (
     <div className="flex items-center gap-x-5 text-xl ">
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiYoutubeLine />
+      <Link href={"https://github.com/Peazzycole"} target="_blank" className="hover:text-accent transition-all duration-300">
+        <RiGithubFill />
       </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiGithubLine />
+      <Link href={"https://www.linkedin.com/in/peazzycole/"} target="_blank" className="hover:text-accent transition-all duration-300">
+        <RiLinkedinFill />
       </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiDribbbleLine />
+      <Link href={"https://twitter.com/Peazzycole1"} target="_blank" className="hover:text-accent transition-all duration-300">
+        <RiTwitterFill />
       </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
+      <Link href={"https://www.instagram.com/peazzycole/"} target="_blank" className="hover:text-accent transition-all duration-300">
         <RiInstagramLine />
+      </Link>
+      <Link href={"https://wa.me/+2348023524572"} target="_blank" className="hover:text-accent transition-all duration-300">
+        <RiWhatsappFill />
       </Link>
     </div>
   );

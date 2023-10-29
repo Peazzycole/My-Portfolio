@@ -1,6 +1,8 @@
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { fadeIn } from "../helper/variants";
+import { HiFaceSmile } from "react-icons/hi2";
+import Link from "next/link";
 
 const DynamicParticlesContainer = dynamic(() => import("@/components/ParticlesContainer"), { ssr: false });
 const DynamicProjectsBtn = dynamic(() => import("@/components/ProjectsBtn"), { ssr: false });
@@ -18,21 +20,25 @@ const Home = () => {
             exit="hidden"
             className="h1"
           >
-            Transforming Ideas <br /> Into{" "}
-            <span className="text-accent">Digital Reality</span>
+            <div className="flex items-center justify-center gap-x-2 xl:justify-start xl:mb-[-30px] md:mb-[-20px]">
+              Hi! Welcome
+              <HiFaceSmile className="animate-bounce text-secondary" /> <br />
+            </div>
+            <span className="text-[#e68e2e] opacity-80 text-xl md:text-2xl">I&apos;M A FULLSTACK DEVELOPER</span>
           </motion.h1>
           <motion.p
             variants={fadeIn("down", 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="max-w-sm text-white xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            impedit molestias animi aut perferendis temporibus, quam nisi
-            reiciendis a facere aspernatur. Consectetur necessitatibus adipisci
-            dolore enim? Veniam perspiciatis minus porro!
+            I&apos;m a developer who focuses on getting things done efficiently. I love writing neat and tidy code. I&apos;m also quick at learning and using new software and technologies.
+            <Link href={'https://drive.google.com/file/d/1dltQvrF31_ifB5759-b0eMzEvpWK1obq/view?usp=sharing'} target='_blank' className="w-full flex items-center justify-center xl:justify-start font-bold">
+              <button className="flex text-white justify-center opacity-90 btn bg-gradient-to-r from-[#F13024] w-max to-[#e68e2e] rounded-full items-center px-8 mt-6 mb-12 hover:scale-110 hover:opacity-70 transition-all duration-300 z-10 ease-in-out">Resume</button>
+            </Link>
           </motion.p>
+
           <div className="flex justify-center xl:hidden relative">
             <DynamicProjectsBtn />
           </div>
@@ -47,14 +53,16 @@ const Home = () => {
           </motion.div>
         </div>
       </div>
-      <div className="w-[1200px] h-full absolute right-0 bottom-0">
-        <motion.div
-          variants={fadeIn("left", 0.4)}
-          initial="hidden"
-          animate="show"
-          exit="hidden"
-          className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full mix-blend-color-dodge translate-z-0 absolute"
-        ></motion.div>
+      <div className="w-full h-full absolute right-0 bottom-0">
+        <div className="">
+          <motion.div
+            variants={fadeIn("left", 0.4)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full mix-blend-color-dodge translate-z-0 absolute"
+          ></motion.div>
+        </div>
         <div>
           <DynamicParticlesContainer />
         </div>

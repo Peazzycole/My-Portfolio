@@ -8,7 +8,7 @@ const ParticlesContainer = () => {
     await loadFull(engine);
   }, []);
 
-  const particleLoaded = useCallback(async () => {}, []);
+  const particleLoaded = useCallback(async () => { }, []);
 
   return (
     <Particles
