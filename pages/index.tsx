@@ -54,7 +54,7 @@ const Home = () => {
         </div>
       </div>
       <div className="w-full h-full absolute right-0 bottom-0">
-        <div className="">
+        <div className="opacity-20">
           <motion.div
             variants={fadeIn("left", 0.4)}
             initial="hidden"
