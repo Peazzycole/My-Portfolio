@@ -10,8 +10,8 @@ const DynamicAvatar = dynamic(() => import("@/components/Avatar"), { ssr: false 
 
 const Home = () => {
   return (
-    <div className="bg-primary/60 h-full">
-      <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
+    <div className="bg-primary/60 h-full -pt-20">
+      <div className="w-full h-full  bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
         <div className="text-center flex flex-col justify-center h-full container mx-auto xl:pt-40 xl:text-left">
           <motion.h1
             variants={fadeIn("down", 0.2)}

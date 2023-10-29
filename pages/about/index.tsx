@@ -11,7 +11,7 @@ const DynamicAvatar = dynamic(() => import("@/components/Avatar"));
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="h-full py-32 bg-primary/30 text-center xl:text-left">
+    <div className="h-full py-32 bg-primary/30 text-center xl:text-left sm:overflow-scroll md:overflow-hidden">
       <DynamicCircles />
       <motion.div
         variants={fadeIn("up", 0.2)}
@@ -32,7 +32,7 @@ const About = () => {
             exit="hidden"
             className="h2"
           >
-            Aboute <span className="text-accent">Me</span>
+            About <span className="text-accent">Me</span>
           </motion.h2>
           {/* summary */}
           <motion.p
@@ -40,9 +40,9 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+            className=" text-sm md:text-lg max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            I am a committed Fullstack developer located in Sapele, Nigeria, with a strong skill set that encompasses HTML, CSS, JavaScript, React, Tailwind, PHP, NodeJs, NextJs, GraphQL, React Native, and Magento. With over 2 years of hands-on experience, I have successfully delivered projects both on a personal level and in collaboration with real-life projects for local and international companies. My experience has exposed me to working with individuals from diverse cultural backgrounds, and I thrive in a collaborative, cross-functional team environment. My primary focus is on producing exceptional web and mobile applications, and I am dedicated to continually improving my skills to provide top-notch solutions.
+            I am a committed Fullstack developer located in Sapele, Nigeria, with a strong skill set that encompasses various web technologies.nMy experience has exposed me to working with individuals from diverse cultural backgrounds, and I thrive in a collaborative, cross-functional team environment. My primary focus is on producing exceptional web and mobile applications, and I am dedicated to continually improving my skills to provide top-notch solutions.
           </motion.p>
           {/* countUp */}
           <motion.div
@@ -98,14 +98,14 @@ const About = () => {
             {aboutData[index].info.map((item, i) => (
               <div
                 key={i}
-                className="flex-1 flex flex-col xl:flex-row max-w-max gap-x-2 items-center text-white/60"
+                className="flex-1 flex flex-col xl:flex-row max-w-max gap-x-2 items-center text-white/60 text-sm"
               >
                 <div className="font-light mb-2 xl:mb-0">{item.title}</div>
                 <div className="hidden xl:flex">-</div>
                 <div className="font-bold">{item.stage}</div>
-                <div className="flex gap-x-4">
+                <div className="flex gap-x-4 flex-wrap justify-center gap-y-2">
                   {item.icons?.map((icon, i) => (
-                    <div key={i} className="text-2xl text-white">
+                    <div key={i} className="sm:text-sm md:text-2xl text-white">
                       {icon}
                     </div>
                   ))}
