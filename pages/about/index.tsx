@@ -11,14 +11,14 @@ const DynamicAvatar = dynamic(() => import("@/components/Avatar"));
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="h-full py-32 bg-primary/30 text-center xl:text-left ">
+    <div className="py-10 xl:py-32 text-center xl:text-left vsm:relative static">
       <DynamicCircles />
       <motion.div
         variants={fadeIn("up", 0.2)}
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="hidden xl:flex absolute -bottom-20 -left-[370px]"
+        className="hidden xl:flex absolute -bottom-[180px] -left-[370px]"
       >
         <DynamicAvatar />
       </motion.div>

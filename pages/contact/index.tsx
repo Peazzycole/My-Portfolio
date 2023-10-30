@@ -15,9 +15,9 @@ const Contact = () => {
   }
 
   return (
-    <div className="h-full bg-primary/30">
+    <div className="">
       <DynamicCircles />
-      <div className="conatiner mx-6 md:mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
+      <div className="conatiner mx-6 md:mx-auto py-10 xl:py-32 text-center xl:text-left flex items-center justify-center h-full">
         <div className="flex flex-col w-full max-w-[700px]">
           <motion.h2
             variants={fadeIn("up", 0.2)}
