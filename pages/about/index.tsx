@@ -65,7 +65,7 @@ const About = () => {
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={10} duration={7} /> +
                 </div>
-                <div className="text-xs uppercase tracking-[1px] leading[1.4] xl:max-w-[100px]">
+                <div className="text-xs uppercase w-max tracking-[1px] leading[1.4] xl:max-w-[100px]">
                   Projects Completed
                 </div>
               </div>
