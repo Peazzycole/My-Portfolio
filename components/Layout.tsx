@@ -17,14 +17,14 @@ const sora = Sora({
 const Layout: React.FC<layoutProps> = ({ children }) => {
   return (
     <div
-      className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}
+      className={`page bg-site dark:bg-siteDark text-black dark:text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}
     >
       <div className="flex-1 h-full w-full">
-        <TopLeftImg />
+        {/* <TopLeftImg /> */}
         <Nav />
         <Header />
-        <div className="h-screen overflow-scroll xsm:overflow-hidden landscape:vsm:overflow-scroll landscape:xl:overflow-hidden relative bg-gradient-to-r from-primary/10 via-black/30 to-black/10 ">
-          <div className="vsm:mt-[100px] h-full vsm:mb-[80px] landscape:vsm:mb-[250px] md:mb-0 ">
+        <div className="h-screen overflow-scroll xsm:overflow-hidden landscape:vsm:overflow-scroll landscape:xl:overflow-hidden relative  ">
+          <div className="vsm:mt-[100px] h-full vsm:mb-[250px] landscape:vsm:mb-[250px] md:mb-0 ">
             {children}
           </div>
         </div>

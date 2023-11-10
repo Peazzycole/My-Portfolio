@@ -6,6 +6,7 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     container: {
       padding: {
@@ -14,7 +15,7 @@ const config: Config = {
     },
     screens: {
       vsm: '320px',
-      xsm: '380px',
+      xsm: '412px',
       sm: '640px',
       md: '768px',
       lg: '960px',
@@ -29,8 +30,10 @@ const config: Config = {
       backgroundImage: {
         explosion: 'url("/bg-explosion.png")',
         circles: 'url("/bg-circles.png")',
-        circleStar: 'url("/circle-star.svg")',
-        site: 'url("/site-bg.svg")',
+        circleStar: 'url("/circle-star-dark.svg")',
+        circleStarDark: 'url("/circle-star.svg")',
+        site: 'url("/dd.jpg")',
+        siteDark: 'url("/rr.jpg")',
       },
       animation: {
         'spin-slow': 'spin 6s linear infinite',
@@ -44,3 +47,6 @@ const config: Config = {
   plugins: [require('tailwind-scrollbar')],
 }
 export default config
+
+
+

@@ -5,23 +5,13 @@ import CountUp from "react-countup";
 import dynamic from "next/dynamic";
 import { aboutData } from "@/helper/data";
 
-const DynamicCircles = dynamic(() => import("@/components/Circles"));
 const DynamicAvatar = dynamic(() => import("@/components/Avatar"));
 
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
     <div className="py-10 xl:py-32 text-center xl:text-left vsm:relative static">
-      <DynamicCircles />
-      <motion.div
-        variants={fadeIn("up", 0.2)}
-        initial="hidden"
-        animate="show"
-        exit="hidden"
-        className="hidden xl:flex absolute -bottom-[180px] -left-[370px]"
-      >
-        <DynamicAvatar />
-      </motion.div>
+
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 xl:justify-start">
         <div className="flex-1 flex flex-col justify-center">
           {/* heading */}
@@ -40,7 +30,7 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className=" text-sm md:text-lg max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+            className=" text-sm md:text-lg max-w-[500px] text-black mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 dark:text-white"
           >
             My name is Peace Oghenevwefe, I am a committed Fullstack developer, with a strong skill set that encompasses various web technologies. My experience has exposed me to working with individuals from diverse cultural backgrounds, and I thrive in a collaborative, cross-functional team environment. My primary focus is on producing exceptional web and mobile applications, and I am dedicated to continually improving my skills to provide top-notch solutions.
           </motion.p>
@@ -98,14 +88,14 @@ const About = () => {
             {aboutData[index].info.map((item, i) => (
               <div
                 key={i}
-                className="flex-1 flex flex-col xl:flex-row max-w-max gap-x-2 items-center text-white/60 text-sm"
+                className="flex-1 flex flex-col xl:flex-row max-w-max gap-x-2 items-center text-black/60 text-sm dark:text-white"
               >
-                <div className="font-light mb-2 xl:mb-0 xl:w-max">{item.title}</div>
+                <div className="font-600 mb-2 xl:mb-0 xl:w-max">{item.title}</div>
                 <div className="hidden xl:flex">-</div>
                 <div className="font-bold">{item.stage}</div>
                 <div className="flex gap-x-4 flex-wrap md:flex-nowrap justify-center gap-y-2">
                   {item.icons?.map((icon, i) => (
-                    <div key={i} className="sm:text-sm md:text-2xl text-white">
+                    <div key={i} className="sm:text-sm md:text-2xl text-black dark:text-white">
                       {icon}
                     </div>
                   ))}
@@ -115,6 +105,15 @@ const About = () => {
           </div>
         </motion.div>
       </div>
+      <motion.div
+        variants={fadeIn("up", 0.2)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+        className="hidden xl:flex absolute -bottom-[180px] -left-[200px]"
+      >
+        <DynamicAvatar />
+      </motion.div>
     </div>
   );
 };

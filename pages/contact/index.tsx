@@ -1,12 +1,6 @@
-'use client'
-
 import { BsArrowRight } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/helper/variants";
-import dynamic from "next/dynamic";
-
-const DynamicCircles = dynamic(() => import("@/components/Circles"), { ssr: false, });
-const DynamicBulb = dynamic(() => import("@/components/Bulb"), { ssr: false });
 
 const Contact = () => {
 
@@ -16,7 +10,6 @@ const Contact = () => {
 
   return (
     <div className="">
-      <DynamicCircles />
       <div className="conatiner mx-6 md:mx-auto py-10 xl:py-32 text-center xl:text-left flex items-center justify-center h-full">
         <div className="flex flex-col w-full max-w-[700px]">
           <motion.h2
@@ -47,16 +40,15 @@ const Contact = () => {
               placeholder="message"
               className="textarea"
             ></textarea>
-            <button className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group">
+            <button className="btn rounded-full bg-accent/90 border-black/30 text-white max-w-[170px] font-bold px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:scale-105 group">
               <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
                 Let&apos;s talk
               </span>
-              <BsArrowRight className="-translate-y-[120%] group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px] opacity-0" />
+              <BsArrowRight className="-translate-y-[120%] group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px] opacity-0 font-bold" />
             </button>
           </motion.form>
         </div>
       </div>
-      <DynamicBulb />
     </div>
   );
 };

@@ -20,7 +20,7 @@
 
 @layer base {
   body {
-    @apply bg-secondary leading-relaxed;
+    @apply bg-white leading-relaxed;
   }
   .page {
     @apply w-full h-screen;
@@ -43,7 +43,7 @@
   }
   .input,
   .textarea {
-    @apply bg-transparent outline-none focus:ring-1 focus:ring-accent border border-white/20 placeholder:text-white/30 placeholder:font-light;
+    @apply bg-transparent outline-none focus:ring-1 focus:ring-accent border border-black/20 dark:border-white/70 placeholder:text-black/30 placeholder:font-light dark:placeholder:text-white/40;
   }
   .textarea {
     @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
