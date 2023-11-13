@@ -26,12 +26,9 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-black dark:text-white"
+              className="mb-4 max-w-[400px] mx-auto xl:text-xl lg:mx-0 text-black dark:text-white"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
-              laborum? Consequuntur itaque voluptates rem sequi fugiat quos.
-              Modi tempore consectetur velit. Rem, modi. Possimus amet vero quis
-              in sapiente maiores.
+              Crafting digital experiences, one line of code at a time – where innovation meets impeccable design
             </motion.p>
           </div>
           <motion.div
