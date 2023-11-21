@@ -9,7 +9,7 @@ const Header = () => {
   const [mode, setMode] = useThemeSwitcher()
 
   return (
-    <header className="absolute h-[90px] z-30 w-full flex items-center px-16 xl:px-0 xl:h-[90px] xsm:bg-none backdrop-blur md:backdrop-blur-none landscape:backdrop-blur landscape:xl:backdrop-blur-none ">
+    <header className="absolute h-[90px] z-30 w-full flex items-center px-16 xl:px-0 xl:h-[90px] xsm:bg-none backdrop-blur md:backdrop-blur-none landscape:backdrop-blur landscape:xl:backdrop-blur-none min-[768px]:mt-7 min-[960px]:mt-0">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-y-6 py-8">
           <Link href={"/"}>

@@ -10,7 +10,7 @@ const Contact = () => {
 
   return (
     <div className="">
-      <div className="conatiner mx-6 md:mx-auto py-10 xl:py-32 text-center xl:text-left flex items-center justify-center h-full">
+      <div className="conatiner mx-6 md:mx-auto py-10 xl:py-[200px] text-center xl:text-left flex items-center justify-center h-full">
         <div className="flex flex-col w-full max-w-[700px]">
           <motion.h2
             variants={fadeIn("up", 0.2)}
@@ -40,7 +40,7 @@ const Contact = () => {
               placeholder="message"
               className="textarea"
             ></textarea>
-            <button className="btn rounded-full bg-accent/90 border-black/30 text-white max-w-[170px] font-bold px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:scale-105 group">
+            <button className="btn rounded-full bg-accent border-black/30 text-white max-w-[170px] font-bold px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:scale-105 group">
               <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
                 Let&apos;s talk
               </span>
