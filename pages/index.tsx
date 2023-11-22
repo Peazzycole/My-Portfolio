@@ -47,7 +47,7 @@ const Home = () => {
             className="max-w-sm text-black xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 vsm:-mt-3 xl:text-xl xl:-mt-5 dark:text-white"
           >
             As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects and articles, showcasing my expertise in React.js and web development.
-            <Link href='https://docs.google.com/document/d/1dvZCFASjW7-MR8CyPV6pwW2nsh05ec5cmN19-a7tcUA/edit?usp=sharing' target='_blank' className="w-full flex items-center justify-center xl:justify-start font-bold vsm:-mb-3">
+            <Link href='https://drive.google.com/file/d/1dltQvrF31_ifB5759-b0eMzEvpWK1obq/view?usp=sharing' target='_blank' className="w-full flex items-center justify-center xl:justify-start font-bold vsm:-mb-3">
               <button className="flex text-black justify-center opacity-90 btn bg-gradient-to-r from-[#F13024] w-max to-[#e68e2e] rounded-full items-center px-8 mt-6 mb-12 vsm:mb-0 hover:scale-110 hover:opacity-70 transition-all duration-300 z-10 ease-in-out">Resume</button>
             </Link>
           </motion.p>
