@@ -8,7 +8,7 @@ const DynamicBulb = dynamic(() => import("@/components/Bulb"), { ssr: false });
 
 const Work = () => {
   return (
-    <div className="py-10 xl:py-[200px] flex items-center ">
+    <div className="py-10 xl:py-[150px] flex items-center ">
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-x-8">
           <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0">
