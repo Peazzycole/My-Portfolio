@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/helper/variants";
 import { useEffect, useState } from "react";
 import { sendContactForm } from "@/helper/api";
+import Spinner from "@/components/Spinner";
+import { FaCheck, FaTimes } from "react-icons/fa";
 
 const Contact = () => {
 
@@ -14,6 +16,7 @@ const Contact = () => {
   })
   const [message, setMessage] = useState('')
   const [error, setError] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
     setMessage('')
@@ -22,12 +25,21 @@ const Contact = () => {
 
   const onSubmitHandler = async (e: any) => {
     e.preventDefault();
+    setIsLoading(true)
 
     try {
       await sendContactForm(formData)
+      setIsLoading(false)
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      })
       setMessage('Message sent successfully')
     } catch (error) {
       setError('Message Not Sent')
+      setIsLoading(false)
     }
   }
 
@@ -48,6 +60,7 @@ const Contact = () => {
             animate="show"
             exit="hidden"
             className="h2 text-center mb-12"
+
           >
             Let&apos;s <span className="text-accent">connect.</span>
           </motion.h2>
@@ -66,6 +79,7 @@ const Contact = () => {
                 name="name"
                 className="input"
                 onChange={onChangeHandler}
+                value={formData.name}
                 required
               />
               <input
@@ -74,6 +88,7 @@ const Contact = () => {
                 name="email"
                 className="input"
                 onChange={onChangeHandler}
+                value={formData.email}
                 required
               />
             </div>
@@ -83,6 +98,7 @@ const Contact = () => {
               name="subject"
               className="input"
               onChange={onChangeHandler}
+              value={formData.subject}
               required
             />
             <textarea
@@ -91,17 +107,22 @@ const Contact = () => {
               placeholder="message"
               className="textarea"
               onChange={onChangeHandler}
+              value={formData.message}
               required
             />
             <button
               className="btn rounded-full bg-accent border-black/30 text-white max-w-[170px] font-bold px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:scale-105 group">
-              <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
-                Let&apos;s talk
-              </span>
-              <BsArrowRight className="-translate-y-[120%] group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px] opacity-0 font-bold" />
+              {!isLoading && <div className="transition-all duration-300 flex items-center justify-center overflow-hidden hover:scale-105 group">
+                <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
+                  Let&apos;s talk
+                </span>
+                <BsArrowRight className="-translate-y-[120%] group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px] opacity-0 font-bold" />
+              </div>}
+
+              {isLoading && <Spinner />}
             </button>
-            {message && <p>{message}</p>}
-            {error && <p>{error}</p>}
+            {message && <p className=" text-green-800 -mt-3 text-xl flex items-center gap-1">Success <FaCheck /></p>}
+            {error && <p className="text-red-800 text-2xl flex items-center gap-1">{error}failed <FaTimes /></p>}
           </motion.form>
         </div>
       </div>
