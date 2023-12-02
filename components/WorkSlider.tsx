@@ -2,10 +2,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import { Mousewheel, Pagination } from "swiper/modules";
 import Image from "next/image";
 import { BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
+import { RiGithubFill } from "react-icons/ri";
 
 const workSlides = {
   slides: [
@@ -15,24 +16,28 @@ const workSlides = {
           title: "Shirt Customizer",
           path: "/tshirt.jpg",
           url: "https://shirt-customizer-ten.vercel.app/",
+          github: "https://github.com/Peazzycole/shirt-customizer",
           isComingSoon: false,
         },
         {
           title: "Dashboard",
           path: "/dashboard.png",
           url: "https://dashboard-iota-green.vercel.app/",
+          github: "https://github.com/Peazzycole/dashboard",
           isComingSoon: false,
         },
         {
           title: "Novaturas",
           path: "/nov2.png",
           url: "https://www.novaturas.lt/",
+          github: "",
           isComingSoon: false,
         },
         {
-          title: "React Meals",
-          path: "/meal.png",
-          url: "https://comforting-cuchufli-ba1d7a.netlify.app/",
+          title: "Shortly",
+          path: "/shortly.png",
+          url: "https://shortly-liart-gamma.vercel.app/",
+          github: "https://github.com/Peazzycole/shortly",
           isComingSoon: false,
         },
       ],
@@ -40,26 +45,31 @@ const workSlides = {
     {
       images: [
         {
-          title: "Shortly",
-          path: "/shortly.png",
-          url: "https://shortly-liart-gamma.vercel.app/",
+          title: "React Meals",
+          path: "/meal.png",
+          url: "https://comforting-cuchufli-ba1d7a.netlify.app/",
+          github: "https://github.com/Peazzycole/Food_Order_App_React",
+          isComingSoon: false,
         },
         {
           title: "title",
           path: "/thumb1.jpg",
           url: "",
+          github: "",
           isComingSoon: true,
         },
         {
           title: "title",
           path: "/thumb2.jpg",
           url: "",
+          github: "",
           isComingSoon: true,
         },
         {
           title: "title",
           path: "/thumb3.jpg",
           url: "",
+          github: "",
           isComingSoon: true,
         },
       ],
@@ -70,11 +80,13 @@ const workSlides = {
 const WorkSlider = () => {
   return (
     <Swiper
+      direction={"horizontal"}
       spaceBetween={10}
       pagination={{
         clickable: true,
       }}
-      modules={[Pagination]}
+      mousewheel={true}
+      modules={[Pagination, Mousewheel]}
       className="h-[280px] sm:h-[480px]"
     >
       {workSlides.slides.map((slide, i) => (
@@ -100,7 +112,7 @@ const WorkSlider = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
                     <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
-                      <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em] text-white">
+                      <div className="flex items-center gap-x-2 text-[13px] xl:text-xl tracking-[0.2em] text-white hover:text-black">
                         <div className="delay-100">LIVE</div>
                         <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
                           PROJECT
@@ -110,6 +122,18 @@ const WorkSlider = () => {
                         </div>
                       </div>
                     </div>
+
+                    {image.github && (
+                      <div className="absolute bottom-3 xl:bottom-8 right-[45%] hidden group-hover:block">
+                        <Link
+                          href={image.github}
+                          target="_blank"
+                          className=" text-white transition-all duration-300 hover:-translate-y-1 hover:scale-125 hover:text-black text-3xl z-20"
+                        >
+                          <RiGithubFill />
+                        </Link>
+                      </div>
+                    )}
                   </div>
                 </Link>
               </div>
