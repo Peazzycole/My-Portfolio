@@ -15,53 +15,52 @@ const workSlides = {
           title: "Shirt Customizer",
           path: "/tshirt.jpg",
           url: "https://shirt-customizer-ten.vercel.app/",
-          isComingSoon: false
+          isComingSoon: false,
         },
         {
           title: "Dashboard",
           path: "/dashboard.png",
           url: "https://dashboard-iota-green.vercel.app/",
-          isComingSoon: false
+          isComingSoon: false,
         },
         {
           title: "Novaturas",
           path: "/nov2.png",
           url: "https://www.novaturas.lt/",
-          isComingSoon: false
+          isComingSoon: false,
         },
         {
           title: "React Meals",
           path: "/meal.png",
           url: "https://comforting-cuchufli-ba1d7a.netlify.app/",
-          isComingSoon: false
+          isComingSoon: false,
         },
       ],
     },
     {
       images: [
         {
-          title: "title",
-          path: "/thumb4.jpg",
-          url: "",
-          isComingSoon: true
+          title: "Shortly",
+          path: "/shortly.png",
+          url: "https://shortly-liart-gamma.vercel.app/",
         },
         {
           title: "title",
           path: "/thumb1.jpg",
           url: "",
-          isComingSoon: true
+          isComingSoon: true,
         },
         {
           title: "title",
           path: "/thumb2.jpg",
           url: "",
-          isComingSoon: true
+          isComingSoon: true,
         },
         {
           title: "title",
           path: "/thumb3.jpg",
           url: "",
-          isComingSoon: true
+          isComingSoon: true,
         },
       ],
     },
@@ -84,11 +83,21 @@ const WorkSlider = () => {
             {slide.images.map((image, i) => (
               <div
                 key={i}
-                className={`${image.isComingSoon ? 'pointer-events-none cursor-not-allowed opacity-30' : 'cursor-pointer'} relative rounded-ls overflow-hidden flex items-center justify-center group`}
+                className={`${
+                  image.isComingSoon
+                    ? "pointer-events-none cursor-not-allowed opacity-30"
+                    : "cursor-pointer"
+                } relative rounded-ls overflow-hidden flex items-center justify-center group`}
               >
                 <Link href={image.url} target="_blank">
                   <div className="flex items-center justify-center relative overflow-hidden group h-[100px] sm:h-[200px]">
-                    <Image src={image.path} alt="" width={500} height={300} className="object-cover h-full" />
+                    <Image
+                      src={image.path}
+                      alt=""
+                      width={500}
+                      height={300}
+                      className="object-cover h-full"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
                     <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
                       <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em] text-white">
