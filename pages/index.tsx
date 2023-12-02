@@ -4,16 +4,22 @@ import { fadeIn } from "../helper/variants";
 import { HiFaceSmile } from "react-icons/hi2";
 import Link from "next/link";
 
-const DynamicParticlesContainer = dynamic(() => import("@/components/ParticlesContainer"), { ssr: false });
-const DynamicProjectsBtn = dynamic(() => import("@/components/ProjectsBtn"), { ssr: false });
-const DynamicAvatar = dynamic(() => import("@/components/Avatar"), { ssr: false });
+const DynamicParticlesContainer = dynamic(
+  () => import("@/components/ParticlesContainer"),
+  { ssr: false }
+);
+const DynamicProjectsBtn = dynamic(() => import("@/components/ProjectsBtn"), {
+  ssr: false,
+});
+const DynamicAvatar = dynamic(() => import("@/components/Avatar"), {
+  ssr: false,
+});
 
 const Home = () => {
   return (
     <div className="">
       <div className="">
         <div className="text-center flex flex-col justify-center container mx-auto xl:pt-40 xl:text-left">
-
           <div className="flex xl:hidden items-center justify-center -mb-6">
             <motion.div
               variants={fadeIn("up", 0.5)}
@@ -36,7 +42,8 @@ const Home = () => {
           >
             <div className="flex items-center justify-center gap-x-2 xl:justify-start xl:mb-[10px] vsm:text-2xl vsm:mt-10 md:text-3xl xl:text-6xl">
               Hi! Welcome
-              <HiFaceSmile className="animate-bounce text-gray-800 dark:text-gray-100" /> <br />
+              <HiFaceSmile className="animate-bounce text-gray-800 dark:text-gray-100" />{" "}
+              <br />
             </div>
           </motion.h1>
           <motion.p
@@ -46,9 +53,17 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm text-black xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 vsm:-mt-3 xl:text-xl xl:-mt-5 dark:text-white"
           >
-            As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects and articles, showcasing my expertise in React.js and web development.
-            <Link href='https://drive.google.com/file/d/1KoU3Rs8BK_hOafEbLc074PIYupDT36pI/view?usp=sharing' target='_blank' className="w-full flex items-center justify-center xl:justify-start font-bold vsm:-mb-3">
-              <button className="flex text-black justify-center opacity-90 btn bg-gradient-to-r from-[#F13024] w-max to-[#e68e2e] rounded-full items-center px-8 mt-6 mb-12 vsm:mb-0 hover:scale-110 hover:opacity-70 transition-all duration-300 z-10 ease-in-out">Resume</button>
+            As a skilled full-stack developer, I am dedicated to turning ideas
+            into innovative web applications. Explore my latest projects and
+            articles, showcasing my expertise in React.js and web development.
+            <Link
+              href="https://drive.google.com/file/d/1JH1qqoM3bWUtjY-wayy8nst4g7eXWna5/view?usp=sharing"
+              target="_blank"
+              className="w-full flex items-center justify-center xl:justify-start font-bold vsm:-mb-3"
+            >
+              <button className="flex text-black justify-center opacity-90 btn bg-gradient-to-r from-[#F13024] w-max to-[#e68e2e] rounded-full items-center px-8 mt-6 mb-12 vsm:mb-0 hover:scale-110 hover:opacity-70 transition-all duration-300 z-10 ease-in-out">
+                Resume
+              </button>
             </Link>
           </motion.p>
 
