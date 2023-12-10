@@ -52,11 +52,10 @@ const workSlides = {
           isComingSoon: false,
         },
         {
-          title: "title",
-          path: "/thumb1.jpg",
-          url: "",
+          title: "3D site",
+          path: "/3d.png",
+          url: "https://peazzycole3dsite.framer.website/",
           github: "",
-          isComingSoon: true,
         },
         {
           title: "title",
