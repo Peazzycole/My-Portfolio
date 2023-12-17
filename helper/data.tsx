@@ -14,8 +14,9 @@ import {
   SiMicrosoftword,
   SiTailwindcss,
   SiNativescript,
+  SiFramer,
   SiGraphql,
-  SiMysql
+  SiMysql,
 } from "react-icons/si";
 
 export const aboutData = [
@@ -36,20 +37,16 @@ export const aboutData = [
           <SiTailwindcss key={8} />,
           <FaNodeJs key={9} />,
           <SiGraphql key={10} />,
-          <SiMysql key={11} />
+          <SiMysql key={11} />,
         ],
       },
       {
         title: "UI / UX",
-        icons: [
-          <FaFigma key={1} />,
-        ],
+        icons: [<SiFramer key={1} />],
       },
       {
         title: "Word Processing",
-        icons: [
-          <SiMicrosoftword key={2} />,
-        ],
+        icons: [<SiMicrosoftword key={2} />],
       },
     ],
   },
