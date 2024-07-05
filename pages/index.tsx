@@ -57,7 +57,7 @@ const Home = () => {
             into innovative web applications. Explore my latest projects and
             articles, showcasing my expertise in React.js and web development.
             <Link
-              href="https://docs.google.com/document/d/1AtCM32yBCgmYQVrgI-sYDDRb7zmkyEHOAzTV8YYXQPQ/edit?usp=sharing"
+              href="https://drive.google.com/file/d/1W-0WZLxNcz0n6GR-KrHbq6U_B6e0M3h9/view?usp=sharing"
               target="_blank"
               className="w-full flex items-center justify-center xl:justify-start font-bold vsm:-mb-3"
             >
