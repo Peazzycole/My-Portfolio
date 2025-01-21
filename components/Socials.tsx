@@ -3,7 +3,6 @@ import Link from "next/link";
 import {
   RiInstagramLine,
   RiGithubFill,
-  RiLinkedinFill,
   RiTwitterFill,
   RiWhatsappFill
 } from "react-icons/ri";
@@ -13,9 +12,6 @@ const Socials = () => {
     <div className="flex items-center gap-x-5 text-xl ">
       <Link href={"https://github.com/Peazzycole"} target="_blank" className="transition-all duration-300 hover:-translate-y-1 hover:scale-125">
         <RiGithubFill />
-      </Link>
-      <Link href={"https://www.linkedin.com/in/peazzycole/"} target="_blank" className="transition-all duration-300 text-[#0A66C2] hover:-translate-y-1 hover:scale-125">
-        <RiLinkedinFill />
       </Link>
       <Link href={"https://twitter.com/Peazzycole1"} target="_blank" className="transition-all duration-300 text-[#55ACEE] hover:-translate-y-1 hover:scale-125">
         <RiTwitterFill />
