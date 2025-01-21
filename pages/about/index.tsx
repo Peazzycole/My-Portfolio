@@ -32,7 +32,7 @@ const About = () => {
             exit="hidden"
             className=" text-sm md:text-lg max-w-[500px] text-black mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 dark:text-white"
           >
-            My name is Peace Oghenevwefe, I am a committed Fullstack developer, with a strong skill set that encompasses various web technologies. My experience has exposed me to working with individuals from diverse cultural backgrounds, and I thrive in a collaborative, cross-functional team environment. My primary focus is on producing exceptional web and mobile applications, and I am dedicated to continually improving my skills to provide top-notch solutions.
+            My name is Peace Oghenevwefe, I am a committed Frontend developer, with a strong skill set that encompasses various web technologies. My experience has exposed me to working with individuals from diverse cultural backgrounds, and I thrive in a collaborative, cross-functional team environment. My primary focus is on producing exceptional web and mobile applications, and I am dedicated to continually improving my skills to provide top-notch solutions.
           </motion.p>
           {/* countUp */}
           <motion.div
@@ -45,7 +45,7 @@ const About = () => {
             <div className="flex flex-1 gap-x-6">
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={2} duration={7} /> +
+                  <CountUp start={0} end={3} duration={7} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading[1.4] xl:max-w-[100px]">
                   Year of experience
@@ -53,7 +53,7 @@ const About = () => {
               </div>
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={7} /> +
+                  <CountUp start={0} end={20} duration={7} /> +
                 </div>
                 <div className="text-xs uppercase w-max tracking-[1px] leading[1.4] xl:max-w-[100px]">
                   Projects Completed
@@ -84,7 +84,7 @@ const About = () => {
               </div>
             ))}
           </div>
-          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
+          <div className="py-2 xl:py-6 flex flex-col gap-y-6 xl:gap-y-6 items-center xl:items-start">
             {aboutData[index].info.map((item, i) => (
               <div
                 key={i}

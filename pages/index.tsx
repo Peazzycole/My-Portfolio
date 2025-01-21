@@ -53,7 +53,7 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm text-black xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 vsm:-mt-3 xl:text-xl xl:-mt-5 dark:text-white"
           >
-            As a skilled full-stack developer, I am dedicated to turning ideas
+            As a skilled Frontend developer, I am dedicated to turning ideas
             into innovative web applications. Explore my latest projects and
             articles, showcasing my expertise in React.js and web development.
             <Link

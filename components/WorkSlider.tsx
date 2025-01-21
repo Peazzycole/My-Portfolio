@@ -13,10 +13,42 @@ const workSlides = {
     {
       images: [
         {
-          title: "Shirt Customizer",
-          path: "/tshirt.jpg",
-          url: "https://shirt-customizer-ten.vercel.app/",
-          github: "https://github.com/Peazzycole/shirt-customizer",
+          title: "Ajah Capital",
+          path: "/ajah.png",
+          url: "https://ajah-capital.vercel.app/",
+          github: "",
+          isComingSoon: false,
+        },
+        {
+          title: "Eve",
+          path: "/eve.png",
+          url: "https://drive.google.com/file/d/1Vy5b0YObtcqmmF5zwjQ7TtVzL46IBaPr/view?usp=sharing",
+          github: "",
+          isComingSoon: false,
+        },
+        {
+          title: "SaleSpot",
+          path: "/salespot.png",
+          url: "https://drive.google.com/file/d/1N2OX2Ohi_0K3m2wwipX-2pM0DpCKiRpM/view?usp=sharing",
+          github: "",
+          isComingSoon: false,
+        },
+        {
+          title: "SaleSpot Dashboard",
+          path: "/salespot-dashboard.png",
+          url: "https://drive.google.com/file/d/11_ex_vJheHnGBvp8EkrFvyFXFmhGkeQF/view?usp=drive_link",
+          github: "",
+          isComingSoon: false,
+        },
+      ],
+    },
+    {
+      images: [
+        {
+          title: "Hub",
+          path: "/hub.png",
+          url: "https://worker-dusky.vercel.app/",
+          github: "https://github.com/Peazzycole/worker",
           isComingSoon: false,
         },
         {
@@ -58,11 +90,11 @@ const workSlides = {
           github: "",
         },
         {
-          title: "title",
-          path: "/thumb2.jpg",
-          url: "",
-          github: "",
-          isComingSoon: true,
+          title: "Shirt Customizer",
+          path: "/tshirt.jpg",
+          url: "https://shirt-customizer-ten.vercel.app/",
+          github: "https://github.com/Peazzycole/shirt-customizer",
+          isComingSoon: false,
         },
         {
           title: "title",
@@ -94,11 +126,10 @@ const WorkSlider = () => {
             {slide.images.map((image, i) => (
               <div
                 key={i}
-                className={`${
-                  image.isComingSoon
-                    ? "pointer-events-none cursor-not-allowed opacity-30"
-                    : "cursor-pointer"
-                } relative rounded-ls overflow-hidden flex items-center justify-center group`}
+                className={`${image.isComingSoon
+                  ? "pointer-events-none cursor-not-allowed opacity-30"
+                  : "cursor-pointer"
+                  } relative rounded-ls overflow-hidden flex items-center justify-center group`}
               >
                 <Link href={image.url} target="_blank">
                   <div className="flex items-center justify-center relative overflow-hidden group h-[100px] sm:h-[200px]">
@@ -107,7 +138,7 @@ const WorkSlider = () => {
                       alt=""
                       width={500}
                       height={300}
-                      className="object-cover h-full"
+                      className="object-cover h-full object-top"
                     />
                     <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
                     <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">

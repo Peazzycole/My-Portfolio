@@ -54,18 +54,23 @@ export const aboutData = [
     title: "experience",
     info: [
       {
+        title: "Frontend Developer - EVE",
+        stage: "July 2024 - Present",
+        icons: [],
+      },
+      {
+        title: "Fullstack Developer - Freelance",
+        stage: "May 2024 - July 2024",
+        icons: [],
+      },
+      {
         title: "Junior Web Developer - Scandiweb",
-        stage: "2022 - 2023",
+        stage: "September 2022 - June 2023",
         icons: [],
       },
       {
         title: "React Intern - LinuxJobber",
         stage: "2022",
-        icons: [],
-      },
-      {
-        title: "Typist - Vision International Academu",
-        stage: "2014 - present",
         icons: [],
       },
     ],
