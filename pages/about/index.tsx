@@ -10,7 +10,7 @@ const DynamicAvatar = dynamic(() => import("@/components/Avatar"));
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="py-10 xl:py-32 text-center xl:text-left vsm:relative static">
+    <div className="py-10 md:py-16 xl:py-32 pb-16 text-center xl:text-left vsm:relative static">
 
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 xl:justify-start">
         <div className="flex-1 flex flex-col justify-center">
@@ -68,7 +68,7 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
+          className="flex flex-col w-full xl:max-w-[48%] xl:h-[480px]"
         >
           <div className="flex gap-x-4  xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, i) => (

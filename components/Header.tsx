@@ -11,9 +11,9 @@ const Header = () => {
   return (
     <header className="absolute h-[90px] z-30 w-full flex items-center px-16 xl:px-0 xl:h-[90px] xsm:bg-none backdrop-blur md:backdrop-blur-none landscape:backdrop-blur landscape:xl:backdrop-blur-none min-[768px]:mt-7 min-[960px]:mt-0">
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-y-6 py-8">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-y-6 py-8">
           <Link href={"/"}>
-            <p className="text-2xl vsm:text-xl w-max vsm:-mb-[15px] md:text-4xl text-black font-bold dark:text-white">Peace <span className="font-thin">Oghenevwefe</span><span className="text-accent">.</span></p>
+            <p className="text-2xl vsm:text-xl w-max vsm:-mb-[15px] md:mb-0 md:text-4xl text-black font-bold dark:text-white">Peace <span className="font-thin">Oghenevwefe</span><span className="text-accent">.</span></p>
           </Link>
           <Socials />
           <button onClick={() => setMode(mode === "light" ? "dark" : "light")} className="bg-white rounded-full p-1 absolute right-4 top-4 md:static hover:scale-105 transition-all duration-300" >

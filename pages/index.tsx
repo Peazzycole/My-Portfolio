@@ -17,7 +17,7 @@ const DynamicAvatar = dynamic(() => import("@/components/Avatar"), {
 
 const Home = () => {
   return (
-    <div className="">
+    <div className="pb-32">
       <div className="">
         <div className="text-center flex flex-col justify-center container mx-auto xl:pt-40 xl:text-left">
           <div className="flex xl:hidden items-center justify-center -mb-6">

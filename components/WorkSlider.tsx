@@ -84,24 +84,11 @@ const workSlides = {
           isComingSoon: false,
         },
         {
-          title: "3D site",
-          path: "/3d.png",
-          url: "https://peazzycole3dsite.framer.website/",
-          github: "",
-        },
-        {
           title: "Shirt Customizer",
           path: "/tshirt.jpg",
           url: "https://shirt-customizer-ten.vercel.app/",
           github: "https://github.com/Peazzycole/shirt-customizer",
           isComingSoon: false,
-        },
-        {
-          title: "title",
-          path: "/thumb3.jpg",
-          url: "",
-          github: "",
-          isComingSoon: true,
         },
       ],
     },
@@ -118,7 +105,7 @@ const WorkSlider = () => {
       }}
       mousewheel={true}
       modules={[Pagination, Mousewheel]}
-      className="h-[280px] sm:h-[480px]"
+      className="h-[330px] sm:h-[480px]"
     >
       {workSlides.slides.map((slide, i) => (
         <SwiperSlide key={i}>
@@ -132,7 +119,7 @@ const WorkSlider = () => {
                   } relative rounded-ls overflow-hidden flex items-center justify-center group`}
               >
                 <Link href={image.url} target="_blank">
-                  <div className="flex items-center justify-center relative overflow-hidden group h-[100px] sm:h-[200px]">
+                  <div className="flex items-center justify-center relative overflow-hidden group h-[120px] sm:h-[200px]">
                     <Image
                       src={image.path}
                       alt=""

@@ -23,8 +23,8 @@ const Layout: React.FC<layoutProps> = ({ children }) => {
         {/* <TopLeftImg /> */}
         <Nav />
         <Header />
-        <div className="h-screen overflow-scroll xsm:overflow-hidden landscape:vsm:overflow-scroll landscape:xl:overflow-hidden relative  ">
-          <div className="vsm:mt-[100px] h-full vsm:mb-[250px] landscape:vsm:mb-[250px] md:mb-0 ">
+        <div className="max-h-screen overflow-scroll xsm:overflow-hidden landscape:vsm:overflow-scroll landscape:xl:overflow-hidden relative  ">
+          <div className="vsm:mt-[100px] h-full md:mb-0 ">
             {children}
           </div>
         </div>

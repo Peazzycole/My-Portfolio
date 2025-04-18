@@ -9,7 +9,7 @@ import {
 
 const Socials = () => {
   return (
-    <div className="flex items-center gap-x-5 text-xl ">
+    <div className="flex items-center justify-center gap-x-5 text-xl ">
       <Link href={"https://github.com/Peazzycole"} target="_blank" className="transition-all duration-300 hover:-translate-y-1 hover:scale-125">
         <RiGithubFill />
       </Link>
