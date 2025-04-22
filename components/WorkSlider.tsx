@@ -162,10 +162,6 @@ const WorkSlider = () => {
                       </div>
                     )}
                   </div>
-                  <div>
-                    <div>Title</div>
-                    Tech stacks used
-                  </div>
                 </Link>
               </div>
             ))}
