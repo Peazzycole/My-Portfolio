@@ -13,11 +13,12 @@ const workSlides = {
     {
       images: [
         {
-          title: "Ajah Capital",
-          path: "/ajah.png",
-          url: "https://ajah-capital.vercel.app/",
-          github: "",
+          title: "PDF-EDITOR",
+          path: "/pdf-editor.png",
+          url: "https://pdf-editor-seven-pied.vercel.app/",
+          github: "https://github.com/Peazzycole/pdf-editor",
           isComingSoon: false,
+          video: false
         },
         {
           title: "Eve",
@@ -25,6 +26,7 @@ const workSlides = {
           url: "https://drive.google.com/file/d/1Vy5b0YObtcqmmF5zwjQ7TtVzL46IBaPr/view?usp=sharing",
           github: "",
           isComingSoon: false,
+          video: true
         },
         {
           title: "SaleSpot",
@@ -32,6 +34,7 @@ const workSlides = {
           url: "https://drive.google.com/file/d/1N2OX2Ohi_0K3m2wwipX-2pM0DpCKiRpM/view?usp=sharing",
           github: "",
           isComingSoon: false,
+          video: true
         },
         {
           title: "SaleSpot Dashboard",
@@ -39,17 +42,19 @@ const workSlides = {
           url: "https://drive.google.com/file/d/11_ex_vJheHnGBvp8EkrFvyFXFmhGkeQF/view?usp=drive_link",
           github: "",
           isComingSoon: false,
+          video: true
         },
       ],
     },
     {
       images: [
         {
-          title: "Hub",
-          path: "/hub.png",
-          url: "https://worker-dusky.vercel.app/",
-          github: "https://github.com/Peazzycole/worker",
+          title: "Ajah Capital",
+          path: "/ajah.png",
+          url: "https://ajah-capital.vercel.app/",
+          github: "",
           isComingSoon: false,
+          video: false
         },
         {
           title: "Dashboard",
@@ -57,6 +62,7 @@ const workSlides = {
           url: "https://dashboard-iota-green.vercel.app/",
           github: "https://github.com/Peazzycole/dashboard",
           isComingSoon: false,
+          video: false
         },
         {
           title: "Novaturas",
@@ -64,6 +70,7 @@ const workSlides = {
           url: "https://www.novaturas.lt/",
           github: "",
           isComingSoon: false,
+          video: false
         },
         {
           title: "Shortly",
@@ -71,6 +78,7 @@ const workSlides = {
           url: "https://shortly-liart-gamma.vercel.app/",
           github: "https://github.com/Peazzycole/shortly",
           isComingSoon: false,
+          video: false
         },
       ],
     },
@@ -82,6 +90,7 @@ const workSlides = {
           url: "https://comforting-cuchufli-ba1d7a.netlify.app/",
           github: "https://github.com/Peazzycole/Food_Order_App_React",
           isComingSoon: false,
+          video: false
         },
         {
           title: "Shirt Customizer",
@@ -89,6 +98,7 @@ const workSlides = {
           url: "https://shirt-customizer-ten.vercel.app/",
           github: "https://github.com/Peazzycole/shirt-customizer",
           isComingSoon: false,
+          video: false
         },
       ],
     },
@@ -105,7 +115,7 @@ const WorkSlider = () => {
       }}
       mousewheel={true}
       modules={[Pagination, Mousewheel]}
-      className="h-[330px] sm:h-[480px]"
+      className="h-[400px] sm:h-[480px]"
     >
       {workSlides.slides.map((slide, i) => (
         <SwiperSlide key={i}>
@@ -130,9 +140,9 @@ const WorkSlider = () => {
                     <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
                     <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
                       <div className="flex items-center gap-x-2 text-[8px] xl:text-xl tracking-[0.2em] text-white hover:text-black">
-                        <div className="delay-100">LIVE</div>
+                        <div className="delay-100">{image.video ? "DEMO" : "LIVE"}</div>
                         <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
-                          PROJECT
+                          {image.video ? "VIDEO" : "PROJECT"}
                         </div>
                         <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
                           <BsArrowRight />
@@ -151,6 +161,10 @@ const WorkSlider = () => {
                         </Link>
                       </div>
                     )}
+                  </div>
+                  <div>
+                    <div>Title</div>
+                    Tech stacks used
                   </div>
                 </Link>
               </div>
